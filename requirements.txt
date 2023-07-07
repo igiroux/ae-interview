@@ -1,6 +1,9 @@
-
-poetry
+black
+isort
 pre-commit
+poetry
 jupyter
 -r notebooks/requirements.txt
 -r wxplorer/requirements.txt
+-e wsdk/
+-e owmapi/

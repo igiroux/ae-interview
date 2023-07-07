@@ -5,6 +5,7 @@ from urllib.parse import urljoin
 
 import benedict
 import requests
+
 from owmapi.dto import WFData
 
 

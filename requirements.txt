@@ -1,0 +1,3 @@
+jupyter
+-r notebooks/requirements.txt
+-r wxplorer/requirements.txt

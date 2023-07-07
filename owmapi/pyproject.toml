@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "owmapi"
+version = "0.1.0"
+description = ""
+authors = ["Ismaila Giroux <Ismaila.Giroux@ikigaicrafts.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-benedict = "^0.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

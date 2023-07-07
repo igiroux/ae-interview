@@ -1,21 +1,16 @@
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
-# YAGNI
-# country_alpha3 = models.CharField(max_length=3, default="FRA")
-# class Meta:
-#     constraints = models.UniqueConstraint(
-#         fields=['station_id', 'country_alpha3'],
-#         name="unique_isoalpha3_station_id",
-#     )
-
 
 class SimpleStationWeather(models.Model):
     forecast_time = models.DateTimeField()
-    temperature = models.PositiveIntegerField()
+    temperature = models.FloatField()
     humidity = models.PositiveIntegerField()
     cloudiness = models.PositiveIntegerField()
     station = models.ForeignKey("WeatherStation", on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = (("forecast_time", "station"),)
 
 
 class WeatherStation(models.Model):
